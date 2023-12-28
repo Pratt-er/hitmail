@@ -1,0 +1,10 @@
+footer {
+    background-color: #161616; /* Set your desired footer background color */
+    color: #fff; /* Text color for the footer */
+    padding: 20px 0; /* Add space inside the footer */
+    margin-top: 20px;
+  }
+  footer p {
+    margin-bottom: 0;
+    font-size: 14px; 
+  }
