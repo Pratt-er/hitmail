@@ -4,5 +4,8 @@
       { "src": "index.js", "use": "@now/node" },
       { "src": "public/**/*", "use": "@now/static" },
       { "src": "views/**/*", "use": "@now/node" }
+    ],
+    "routes": [
+      { "src": "/", "dest": "/index.js" }
     ]
   }
