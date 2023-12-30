@@ -2,9 +2,9 @@ const express = require('express');
 const path = require('path')
 const nodemailer = require('nodemailer');
 
-const commentRoute = require("./router/commentRouter");
-const { connectionToMongodb } = require('./db/connect')
-const Comment = require('./models/comment')
+const commentRoute = require("./commentRouter");
+const { connectionToMongodb } = require('../db/connect')
+const Comment = require('../models/comment')
 require('dotenv').config()
 
 const app = express();
