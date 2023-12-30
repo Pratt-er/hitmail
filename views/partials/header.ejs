@@ -5,6 +5,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Header with Image</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <style>
+    /* Reset default margin/padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  header {
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo-list,
+  .header-list {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-item {
+    /* Increase space between logo and other items */
+    margin-right: 150px; /* Adjust this value to your desired spacing */
+  }
+  
+  .logo img {
+    height: auto; /* Allows the image to resize while maintaining aspect ratio */
+    max-width: 130%; /* Sets the maximum width to the container's width */
+  }
+
+  /* Other styles you might have */
+
+/* Image container styles */
+.image-container {
+    max-width: 100%; /* Ensures the container doesn't exceed its parent's width */
+    display: flex;
+    flex-direction: column; /* Places images in a column */
+    align-items: center; /* Centers the images horizontally */
+}
+
+/* Limit image max-width to prevent overflowing */
+.image-container img {
+    max-width: 100%; /* Limits image width to container width */
+    height: auto; /* Allows the images to resize while maintaining aspect ratio */
+    margin-bottom: 20px; /* Adds spacing between images */
+}
+  
+  .header-list {
+    /* Move the header list to the left */
+    margin-left: -120px; /* Adjust this value to your desired negative margin */
+  }
+  
+  .header-item {
+    /* Adds space between header items */
+    margin-left: 15px; /* Increased margin between navigation links */
+  }
+  
+  .header-item:last-child {
+    margin-right: 0; /* Removes margin from the last item */
+  }
+  
+  .header-list li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px; /* Increased font size for navigation links */
+  }
+  
+  </style>
 </head>
 <body>
   <header>

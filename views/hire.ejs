@@ -11,6 +11,289 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <link rel="stylesheet" href="hire.css" />
+    <style>
+      /* Reset default margin/padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  header {
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo-list,
+  .header-list {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-item {
+    /* Increase space between logo and other items */
+    margin-right: 150px; /* Adjust this value to your desired spacing */
+  }
+  
+  .logo img {
+    height: auto; /* Allows the image to resize while maintaining aspect ratio */
+    max-width: 100%; /* Sets the maximum width to the container's width */
+  }
+  /* Other styles you might have */
+
+/* Image container styles */
+.image-container {
+    max-width: 100%; /* Ensures the container doesn't exceed its parent's width */
+    display: flex;
+    flex-direction: column; /* Places images in a column */
+    align-items: center; /* Centers the images horizontally */
+}
+.background-image {
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Adjust the height as needed */
+    position: relative;
+}
+/* Comments styling */
+.comments-section {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px; /* Add some padding below each section */
+  margin-left: 30px; /* Adjust the margin as needed */
+}
+
+
+
+.comment-info {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.comment-text {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.comment-buttons {
+  margin-top: 10px;
+}
+
+.comment-buttons button {
+  margin-right: 10px;
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 3px;
+}
+#commentForm {
+  margin-left: 30px;
+}
+
+
+#commentForm ~ *:not(footer) {
+  margin-left: 30px;
+  border-bottom: 1px solid #ccc;
+  margin-top: 20px;
+}
+
+.comment {
+  margin-bottom: 20px; /* Add space between each comment */
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  margin-bottom: 20px; /* Add space between the border-bottom and the item before it */
+}
+
+.comment + .comment {
+  border-top: 20px solid transparent; /* Add space between border-bottom and the item above */
+}
+
+.edit-comment,
+.delete-comment {
+  border-radius: 30px; /* Border radius of 30px */
+  padding: 8px 16px; /* Adjust padding as needed */
+}
+
+.edit-comment {
+  background-color: darkblue; /* Dark blue background color */
+  color: white; /* Text color */
+  border-color: darkblue; /* Border color */
+}
+
+.delete-comment {
+  background-color: #8b0000; /* Dull red background color */
+  color: white; /* Text color */
+  border-color: #8b0000; /* Border color */
+}
+
+
+.reply-form {
+  margin-top: 10px;
+}
+
+.reply-form .form-group {
+  margin-bottom: 10px;
+}
+
+.reply-form button {
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 3px;
+  background-color: #28a745;
+  border-color: #28a745;
+  color: #fff;
+}
+
+.section-heading {
+  color: red;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+/* Added styles for specific classes and elements */
+.red-text {
+  color: red;
+}
+
+.yellow-underlined-text {
+  color: yellow;
+  text-decoration: underline;
+}
+
+.yellow-underlined-text:hover {
+  text-decoration: none; /* Removing underline on hover */
+}
+
+.custom-section {
+  /* ... (existing styles) ... */
+  font-size: 2.5em; /* Double the font size */
+}
+
+
+.yellow-underlined-text {
+  color: yellow; /* Yellow color for specified text */
+}
+
+
+.custom-section {
+  background-color: rgb(1, 1, 5);
+  color: white;
+  padding: 40px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  height: 300%; /* Double the current height */
+  font-family: "Arial", sans-serif; /* Change to a professional font-family */
+  font-size: 23px; /* Adjust font size to make it more professional */
+}
+.custom-section .section-content {
+  margin: 0 auto; /* Center the content */
+  max-width: calc(100% - 60px); /* Reduce the width by 60px */
+  text-align: center; /* Center the text */
+}
+.custom-section p {
+  font-size: 23px;
+}
+
+.custom-section ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.custom-section li {
+  margin-bottom: 10px;
+}
+
+.image-container {
+  position: relative;
+}
+
+.image-container img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+.cover-link {
+  position: absolute;
+  top: 450px; /* Adjust these values to position the link */
+  left: 150px; /* Adjust these values to position the link */
+  width: 220px; /* Adjust width and height to cover the desired area */
+  height: 55px; /* Adjust width and height to cover the desired area */
+  background-color: red; /* Semi-transparent background */
+  /* Other styles to make it look like a cover */
+  border: 2px solid black;
+  border-radius: 30px;
+  text-align: center;
+  color: white;
+  line-height: 55px; /* Vertically centers the text */
+  text-decoration: none; /* Removes default underline for links */
+}
+
+.cover-link:hover {
+  background-color: darkred; /* Change color on hover */
+}
+
+/* Other styles you might have */
+
+/* Other styles you might have */
+.custom-heading {
+  text-align: center;
+}
+
+
+/* Limit image max-width to prevent overflowing */
+.image-container img {
+    max-width: 100%; /* Limits image width to container width */
+    height: auto; /* Allows the images to resize while maintaining aspect ratio */
+    margin-bottom: 20px; /* Adds spacing between images */
+}
+.embed-responsive {
+    max-width: 640px; /* Set a maximum width for the video */
+    margin: 20px auto; /* Center the video horizontally */
+}
+  .header-list {
+    /* Move the header list to the left */
+    margin-left: -120px; /* Adjust this value to your desired negative margin */
+  }
+  html, body {
+    overflow-x: hidden;
+  }
+  .header-item {
+    /* Adds space between header items */
+    margin-left: 15px; /* Increased margin between navigation links */
+  }
+  
+  .header-item:last-child {
+    margin-right: 0; /* Removes margin from the last item */
+  }
+  
+  .header-list li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px; /* Increased font size for navigation links */
+  }
+  @media screen and (max-width: 768px) {
+    .header-list {
+      margin-left: 0; /* Reset the margin for smaller screens */
+      display: flex;
+      flex-direction: column; /* Show links vertically on smaller screens */
+      align-items: center; /* Center-align the links */
+    }
+  
+    .header-item {
+      margin: 10px 0; /* Add some space between the links */
+    }
+  }
+  
+    </style>
   </head>
   <body>
     <header><%- include('./partials/header'); %></header>
