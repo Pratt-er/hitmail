@@ -2,9 +2,9 @@ const express = require('express');
 const path = require('path')
 const nodemailer = require('nodemailer');
 
-const commentRoute = require("./commentRouter");
-const { connectionToMongodb } = require('../db/connect')
-const Comment = require('../models/comment')
+const commentRoute = require("./router/commentRouter");
+const { connectionToMongodb } = require('./db/connect')
+const Comment = require('./models/comment')
 require('dotenv').config()
 
 const app = express();
@@ -14,8 +14,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.use(express.static(path.join(__dirname, '../public')));
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, '../views'));
+app.set('view engine', 'ejs')
+app.set('views', 'views')
 
 connectionToMongodb();
 
