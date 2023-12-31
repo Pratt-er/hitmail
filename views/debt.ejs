@@ -67,6 +67,29 @@
   border-radius: 8px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
+@media screen and (max-width: 767px) {
+  .content-body {
+    flex-direction: column;
+  }
+
+  .content-text,
+  .content-images {
+    width: 100%; /* Make text and image full width */
+    margin: 0; /* Remove margin between text and image */
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .content-body {
+    flex-direction: column;
+  }
+
+  .content-text,
+  .content-images {
+    width: 100%; /* Make text and image full width */
+    margin: 0; /* Remove margin between text and image */
+  }
+}
 
     </style>
   </head>
