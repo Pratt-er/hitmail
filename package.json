@@ -13,7 +13,7 @@
   
   "main": "index.js",
   "engines": {
-    "node": "20.10.0"
+    "node": "16.x"
   },
   "scripts": {
     "start": "nodemon index.js"
